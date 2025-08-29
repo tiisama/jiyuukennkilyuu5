@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script>
+  const USER = "sou";
+  const PASS = "kaisui";
+
+  const inputUser = prompt("ユーザー名を入力してください:");
+  const inputPass = prompt("パスワードを入力してください:");
+
+  if (inputUser !== USER || inputPass !== PASS) {
+    document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%'>認証失敗</h1>";
+    throw new Error("認証失敗");
+  }
+</script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PDFビューア | 海水から、塩は、どのくらい取れるか.pdf</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="title">
+      <span class="logo">📄</span>
+      <h1>PDFビューア</h1>
+    </div>
+    <nav class="actions">
+      <a class="btn" href="海水から、塩は、どのくらい取れるか.pdf" download>ダウンロード</a>
+      <a class="btn" href="海水から、塩は、どのくらい取れるか.pdf" target="_blank" rel="noopener">新しいタブで開く</a>
+    </nav>
+  </header>
+
+  <main class="viewer">
+    <!-- ネイティブPDF表示（Chrome/Edge/Firefox/Safariで動作） -->
+    <embed
+      src="海水から、塩は、どのくらい取れるか.pdf#view=FitH"
+      type="application/pdf"
+      class="pdf-embed"
+    />
+
+    <!-- フォールバック（PDFプラグインが無い環境用） -->
+    <div class="fallback">
+      <p>お使いのブラウザでPDFを直接表示できないようです。</p>
+      <p><a class="btn" href="海水から、塩は、どのくらい取れるか.pdf" target="_blank" rel="noopener">PDFを開く/ダウンロード</a></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small>© 2025 PDF Viewer</small>
+  </footer>
+</body>
+</html>
